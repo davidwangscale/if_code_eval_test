@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width">
+	<title>Tests</title>
+	<link rel="stylesheet" type="text/css" href="../dist/ezra-style.css" />
+</head>
+
+<body>
+	<div id="main">
+		<table class="unchanged rich-diff-level-one">
+			<thead>
+				<tr>
+					<th></th>
+					<th>[書卷][章]:[節]</th>
+					<th>[書卷][中文章][節]</th>
+					<th>[英文書卷][章]:[節]</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>單節</td>
+					<td>約 3:16</td>
+					<td>約三16</td>
+					<td>John 3:16</td>
+				</tr>
+				<tr>
+					<td>多節</td>
+					<td>弗 2:1-3,5</td>
+					<td>弗二1-3,5</td>
+					<td>Eph. 2:1-3,5</td>
+				</tr>
+				<tr>
+					<td>不同標點</td>
+					<td>弗 2：1–3，5</td>
+					<td>弗二1～3、5</td>
+					<td>Eph. 2:1~3,5</td>
+				</tr>
+				<tr>
+					<td>全寫</td>
+					<td>以弗所書 2:1-3,5</td>
+					<td>以弗所書二章1至3及5節</td>
+					<td>Ephesians 2:1-3,5</td>
+				</tr>
+				<tr>
+					<td>多章</td>
+					<td>約 1:29;3:16</td>
+					<td>約一29；三16</td>
+					<td>John 1:29;3:16</td>
+				</tr>
+				<tr>
+					<td>跨章</td>
+					<td>羅 1:31-2:2</td>
+					<td>羅十一35至十二2</td>
+					<td>Rom 11:35-12:2</td>
+				</tr>
+			</tbody>
+		</table>
+		<table>
+			<tr>
+				<td>多個</td>
+				<td>第一個（約叁1）；第二個（雅一22）</td>
+			</tr>
+			<tr>
+				<td>大字</td>
+				<td style="font-size: 24px">
+					因此有話吩咐我們：「存溫柔的心領受那所栽種的道。」（雅一21）如果有人對自己的技能
+				</td>
+			</tr>
+			<tr>
+				<td>沒這章節</td>
+				<td>再沒有比謙卑對我們更有用處，更討上帝喜悅的（彼前三42），因此這種特別的方式</td>
+			</tr>
+			<tr>
+				<td>無反應</td>
+				<td>7（本文摘譯自約翰歐文《希伯來書註釋》四章7節1部分</td>
+			</tr>
+			<tr>
+				<td>簡體</td>
+				<td>将他的道教训他们。」（诗廿五9）「谦卑人」原文是指谦卑</td>
+			</tr>
+		</table>
+	</div>
+	<script src="../dist/ezra.js"></script>
+	<script>
+		ezraLinkifier.linkify(document.getElementById("main"));
+	</script>
+</body>
+
+</html>

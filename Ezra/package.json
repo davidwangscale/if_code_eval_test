@@ -1,0 +1,32 @@
+{
+  "name": "ezra",
+  "version": "1.5.0",
+  "description": "linkify Chinese Bible verses",
+  "main": "ezra.js",
+  "scripts": {
+    "watch": "watchify src/main.js -o dist/ezra.js --debug --verbose",
+    "build": "cp src/copyright.js dist/ezra.js & browserify -p tinyify src/main.js >> dist/ezra.js",
+    "build-chrome-ext": "cd chromeExt && ./build.sh",
+    "test": "qunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenHung/Ezra.git"
+  },
+  "author": "Ken Hung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KenHung/Ezra/issues"
+  },
+  "homepage": "https://github.com/KenHung/Ezra#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "eslint": "^8.8.0",
+    "qunit": "^2.17.2",
+    "tinyify": "^3.0.0",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "tether-drop": "^1.4.2"
+  }
+}
